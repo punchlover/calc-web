@@ -86,6 +86,7 @@ input:focus {
     color: white;
     transform: scale(1);
     transition: all 0.3s ease; 
+    user-select: none;
 }
 
 .rows div:hover {
