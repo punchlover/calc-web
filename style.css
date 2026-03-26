@@ -149,3 +149,25 @@ h3 {
     }
 }
 
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em; 
+    font-family:"Montserrat", sans-serif;
+    color: rgb(56, 56, 56); 
+    animation-name:p-hidden ; 
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
+@keyframes p-hidden {
+    0% {
+        color: rgba(255, 255, 255, 0); 
+    }
+    100% {
+        color: rgb(56, 56, 56);
+    }
+}
+
