@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -11,19 +13,24 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    flex-direction: column;
+    gap: 1em;
     
 }
 
 .calc-body {
-    width: 45vh;
-    height: 55vh;
-    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    height: 65vh;
     border-radius: 20px;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 7px rgb(29, 29, 29) ;
     animation-name:calc-body ;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
+    background-color: rgb(63, 63, 63);
+    gap: 1em;
 }
 
 @keyframes calc-body {
@@ -34,3 +41,110 @@ body {
         transform: translateY(0);
     }
 }
+
+input {
+    width: 60%;
+    height: 80%;
+    font-size: 1.8em;
+    font-family:"Montserrat", sans-serif;
+    border: none;
+    color: white;
+    background-color: rgb(99, 98, 98);
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgb(29, 29, 29);
+}
+
+input:focus {
+    outline: none;
+}
+
+.rows {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.rows1 {
+    display: flex;
+    gap: 1.2em;
+}
+
+.rows div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    height: 80%;
+    font-size: 1.7em; 
+    font-family:"Montserrat", sans-serif;
+    background-color: rgb(99, 98, 98);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(29, 29, 29);
+    color: white;
+    transform: scale(1);
+    transition: all 0.3s ease; 
+}
+
+.rows div:hover {
+    transform: scale(0.9);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.rows div:active {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(64, 231, 114);
+}
+
+.rows .add ,.rows .sub ,.rows .mult ,.rows .div {
+    background-color: rgb(160, 118, 40);
+    font-size: 2em;
+}
+
+.rows .add:active ,.rows .sub:active ,.rows .mult:active ,.rows .div:active {
+    box-shadow: 0 0 15px rgb(160, 118, 40);
+}
+
+.rows .clear {
+    background-color: rgb(238, 94, 94);
+}
+
+.rows .clear:active {
+    box-shadow: 0 0 15px rgb(238, 94, 94);
+}
+
+.rows .equals {
+    background-color: rgb(64, 125, 175);
+}
+
+.rows .equals:active {
+    box-shadow: 0 0 15px rgb(64, 125, 175);
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em; 
+    font-family:"Montserrat", sans-serif;
+    text-shadow: 0 0 15px rgb(255, 255, 255);
+    color: white; 
+    animation-name:h3-hidden ; 
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
+@keyframes h3-hidden {
+    0% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0);
+        color: rgba(255, 255, 255, 0); 
+    }
+    100% {
+        text-shadow: 0 0 15px rgb(255, 255, 255);
+        color: rgb(255, 255, 255); 
+    }
+}
+
